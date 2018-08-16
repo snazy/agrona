@@ -77,6 +77,7 @@ public class Object2NullableObjectHashMapConformanceTest
             }
         }.withFeatures(
             MapFeature.GENERAL_PURPOSE,
+            MapFeature.ALLOWS_NULL_KEYS,
             MapFeature.ALLOWS_NULL_VALUES,
             CollectionSize.ANY,
             CollectionFeature.SUPPORTS_ITERATOR_REMOVE)

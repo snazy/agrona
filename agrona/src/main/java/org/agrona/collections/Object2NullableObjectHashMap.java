@@ -45,6 +45,18 @@ public class Object2NullableObjectHashMap<K, V> extends Object2ObjectHashMap<K, 
     }
 
     @Override
+    protected Object mapNullKey(final Object key)
+    {
+        return key == null ? NullReference.INSTANCE : key;
+    }
+
+    @Override
+    protected K unmapNullKey(final Object key)
+    {
+        return key == NullReference.INSTANCE ? null : (K)key;
+    }
+
+    @Override
     protected Object mapNullValue(final Object value)
     {
         return value == null ? NullReference.INSTANCE : value;
